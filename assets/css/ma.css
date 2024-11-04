@@ -1,0 +1,127 @@
+/* General Styles */
+body {
+    background-color: #f7f7f7;
+}
+
+/* Landing Section */
+.landing-section {
+    background: url('assets/images/young famer.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    min-height: 500px;
+}
+
+.landing-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.landing-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.button-shop {
+    background-color: #f7c40f;
+    color: #24305e;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* Market Access Sections */
+.section-title {
+    color: #4b6e42;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.item-card {
+    width: calc(25% - 20px);
+    height: 370px;
+    background-color: white;
+    border: 2px solid #f7c40f;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item-card img {
+    width: 100%;
+    height: 185px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #e2e2e2;
+}
+
+.item-card h3 {
+    font-size: 1.2em;
+    color: #4b6e42;
+}
+
+.item-card p {
+    color: #666;
+    margin: 5px 0;
+}
+
+.item-card .price {
+    font-weight: bold;
+    color: #4b6e42;
+    margin: 10px 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .item-card {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .item-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .item-card {
+        width: 100%;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #4b6e42;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section h3 {
+    color: #f7c40f;
+}
+
+.footer-section a {
+    color: #f7c40f;
+    display: block;
+    margin: 5px 0;
+}

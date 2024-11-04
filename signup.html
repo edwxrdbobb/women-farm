@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Women Farm Connect</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/signup.css">
+</head>
+<body>
+
+    <!-- Sign Up Container -->
+    <div class="signup-container">
+        <!-- Image Section -->
+        <div class="signup-image" style="background: url('assets/images/signup 3.jpg') center/cover no-repeat;"></div>
+
+        <!-- Form Section -->
+        <div class="signup-form">
+            <h2>Create Your Account</h2>
+            <form action="#">
+                <!-- Account Type -->
+                <label for="account-type">I am signing up as</label>
+                <select id="account-type" name="account-type" required>
+                    <option value="" disabled selected>Select type</option>
+                    <option value="individual">Individual</option>
+                    <option value="business">Business</option>
+                </select>
+
+                <!-- Name/Business Name -->
+                <label for="name">Name/Business Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name or business name" required>
+
+                <!-- Phone Number -->
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                <!-- Email -->
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <!-- Password -->
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <!-- Confirm Password -->
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+
+                <!-- Sign Up Button -->
+                <button type="submit">Sign Up</button>
+            </form>
+
+            <!-- Alternative Signup Options -->
+            <div class="alt-signup">
+                <p>Or sign up with:</p>
+                <a href="#"><img src="assets/images/Email icon.png" alt="Email Icon">Email</a>
+                <a href="#"><img src="assets/images/link icon.png" alt="LinkedIn Icon">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-section">
+            <h3>Address</h3>
+            <p>123 Green Road, Freetown, Sierra Leone</p>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: info@womenfarmconnect.org</p>
+            <p>Phone: +232 123 4567</p>
+        </div>
+        <div class="footer-section">
+            <h3>Social Media</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+        </div>
+    </div>
+
+</body>
+</html>

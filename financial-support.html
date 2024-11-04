@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Support - Women Farm Connect</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/fs.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Landing Section -->
+    <div class="landing-section" style="background: url('assets/images/farm research .jpg') center/cover no-repeat;">
+        <h1>Financial Support for Farmers</h1>
+        <p>Access grants, loans, and resources to support your farming journey and boost your success.</p>
+        <button class="button-learn">Learn More</button>
+    </div>
+
+    <!-- Government Grants Section -->
+    <h2 class="section-title">Government Grants</h2>
+    <div class="section-container">
+        <div class="item-card">
+            <img src="assets/images/funding 3.png" alt="Government Grant 1">
+            <h3>Sierra Leone</h3>
+            <p>African Development Fund approves $2 million grant to boost food production</p>
+            <a href="#" class="learn-more">Read more...</a>
+        </div>
+        <div class="item-card">
+            <img src="assets/images/fundings.png" alt="Government Grant 2">
+            <h3>Launching the 'Salone Access to Finance' Project marks a significant stride in realizing government’s flagship Feed Salone Strategy.</h3>
+            <p>Sierra Leone Government, EU, and UNDCF officially launch 'Salone Access to Finance' Project to Empower over 500,000 Farmers</p>
+            <a href="#" class="learn-more">Read more...</a>
+        </div>
+        <div class="item-card">
+            <img src="assets/images/funding 2.png" alt="Government Grant 3">
+            <h3>REQUEST FOR PROJECT FUNDING FROM THE ADAPTATION FUND</h3>
+            <p>Agriculture Value Chain Development Project- Promoting Climate Resilience in the Cocoa and rice sectors as Adaptation strategy in Sierra Leone</p>
+            <a href="#" class="learn-more">Read more...</a>
+        </div>
+    </div>
+
+    <!-- Private Sector Grants Section -->
+    <h2 class="section-title">Private Sector Grants</h2>
+    <div class="section-container">
+        <div class="item-card">
+            <img src="assets/images/Small Grant.webp" alt="Private Sector Grant 1">
+            <h3>Empowering Women in Agriculture Program</h3>
+            <p>Small Grants Yield Big Wins for Women Farmers in Sierra Leone</p>
+            <a href="#" class="learn-more">Read more...</a>
+        </div>
+        <div class="item-card">
+            <img src="assets/images/Access to finance.png" alt="Private Sector Grant 2">
+            <h3>Allan & Nesta Ferguson Charitable Trust</h3>
+            <p>Sierra Leone Government, EU, and UNDCF officially launch 'Salone Access to Finance' Project to Empower Farmers</p>
+            <a href="#" class="learn-more">Read more...</a>
+        </div>
+        <div class="item-card">
+            <img src="assets/images/euro.jpg" alt="Private Sector Grant 3">
+            <h3>Euro and Government of Sierra Leone</h3>
+            <p>The Government of Sierra Leone Signs 17.5 Million Euro Grant Financing Agreement with the German Government to Support Youth Empowerment</p>
+            <a href="#" class="learn-more">Read more...</a>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    
+    <script>
+        // Load header and footer
+        fetch('assets/addons/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+
+        fetch('assets/addons/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>

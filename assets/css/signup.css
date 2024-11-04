@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container */
+.signup-container {
+    display: flex;
+    width: 100%;
+    height: 800px;
+    margin: 4rem 2rem;
+}
+
+/* Image Section */
+.signup-image {
+    flex: 1;
+    background: url('../images/signup 3.jpg') center/cover no-repeat;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+/* Form Section */
+.signup-form {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.signup-form h2 {
+    font-size: 2em;
+    color: #4b6e42;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.signup-form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.signup-form input {
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.signup-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.signup-form button {
+    padding: 15px;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4b6e42;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-form button:hover {
+    background-color: #3a5631;
+}
+
+/* Alternative Signup Options */
+.alt-signup {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1em;
+    color: #666;
+}
+
+.alt-signup p {
+    margin-bottom: 10px;
+}
+
+.alt-signup a {
+    color: #4b6e42;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.alt-signup a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px; /* Adjusts space between the image and text */
+    vertical-align: middle;
+}
+
+.alt-signup a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: #4b6e42;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.footer-section {
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #f7c40f;
+}
+
+.footer-section a {
+    color: #f7c40f;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}

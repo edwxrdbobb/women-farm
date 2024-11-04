@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Women Farm Connect</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <!-- Landing Section -->
+    <div class="landing">
+        <h1>About Us</h1>
+        <p>Connecting Women Farmers to Resources, Markets, and Financial Support</p>
+    </div>
+
+    <!-- Mission & Vision Section -->
+    <div class="section-mission-vision">
+        <div class="mission">
+            <h2>Our Mission</h2>
+            <p>Our mission is to empower female farmers by providing them with essential resources, market access, and financial support, enabling sustainable agricultural practices and improving their livelihoods.</p>
+        </div>
+        <div class="vision">
+            <h2>Our Vision</h2>
+            <p>We envision a world where female farmers have equal access to opportunities, tools, and knowledge to thrive in agriculture, contributing to food security and economic growth.</p>
+        </div>
+    </div>
+
+    <!-- Our Story Section -->
+    <div class="our-story">
+        <p>Women Farm Connect was born out of a desire to address the unique challenges faced by female farmers. Our founder Abdulai Conteh, was inspired by the resilience of his grandma in agriculture, created this platform to bridge the gap in resources and support for female farmers. From humble beginnings to a growing community, we’ve empowered countless women to take charge of their farms and futures.</p>
+    </div>
+
+    <!-- Meet the Team Section -->
+    <div class="meet-the-team">
+        <h2>Meet the Team</h2>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="assets/images/Leo.jpeg" alt="Abdulai Conteh">
+                <h3>Abdulai Conteh</h3>
+                <p>CEO & Founder</p>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/Sal.png" alt="Team Member 2">
+                <h3>Salamatu Conteh</h3>
+                <p>Head of Marketing</p>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/Isata.png" alt="Team Member 3">
+                <h3>Isata Jalloh</h3>
+                <p>Community Manager</p>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/Hannah.png" alt="Team Member 4">
+                <h3>Hannah Kargbo</h3>
+                <p>Financial Assistant</p>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/Kadie.png" alt="Team Member 5">
+                <h3>Kadie Sesay</h3>
+                <p>Agriculture Expert</p>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/Tamba.png" alt="Tamba Tom Nanoh">
+                <h3>Tamba Tom Nanoh</h3>
+                <p>Operations Manager</p>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div class="contact-section">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+   <div id="footer"></div>
+
+   <script>
+    // Load header and footer
+    fetch('assets/addons/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+
+    fetch('assets/addons/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+</script>
+
+</body>
+</html>
