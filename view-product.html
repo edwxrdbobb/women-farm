@@ -3,9 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product Details</title>
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    
+    <div id="header"></div>
+    <div class="flex-cont">
+        <div id="product-details">
+            <img id="product-image" src="" alt="Product Image">
+            <h3 id="product-name"></h3>
+            <p class="price"  id="product-price"></p>
+            <p class="price" id="total-price"></p>
+
+            <!-- Quantity Selector -->
+            <div class="quantity-selector">
+                <button id="decrease-quantity">-</button>
+                <input type="number" id="quantity" value="1" min="1" readonly>
+                <button id="increase-quantity">+</button>
+            </div>
+
+            <div class="">
+                <button class="buy-btn btn qm" id="buy-button">
+                    <img src="assets/images/QMONEY.jpg" alt="">
+                    Buy with Qmoney
+                </button>
+            </div>
+        </div>
+        <form id="checkout-form" style="display: none;">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="text" placeholder="QMoney Number" required>
+            <input type="text" placeholder="Pin" required>
+            <h3>OTP Checker</h3>
+            <input type="text" placeholder="OTP" required>
+            <button type="submit">Checkout</button>
+        </form>
+        <div id="success-message">Bought successfully!</div> <!-- Success message -->
+    </div>
+    <div id="footer"></div>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const productName = urlParams.get('name');
+        const productImage = urlParams.get('image');
+        const productPrice = parseFloat(urlParams.get('price').replace('Nle', '').replace(',', ''));
+
+        document.getElementById('product-name').innerText = productName;
+        document.getElementById('product-image').src = productImage;
+        document.getElementById('product-price').innerText = `Price: Nle${productPrice.toFixed(2)}`;
+        document.getElementById('total-price').innerText = `Total: Nle${productPrice.toFixed(2)}`;
+
+        // Add event listener to the buy button
+        document.getElementById('buy-button').addEventListener('click', function() {
+            const checkoutForm = document.getElementById('checkout-form');
+            checkoutForm.style.display = 'block'; // Show the checkout form
+            checkoutForm.scrollIntoView({ behavior: 'smooth' }); // Scroll to the form
+        });
+
+        // Quantity functionality
+        let quantity = 1;
+
+        document.getElementById('increase-quantity').addEventListener('click', function() {
+            quantity++;
+            document.getElementById('quantity').value = quantity;
+            updateTotalPrice();
+        });
+
+        document.getElementById('decrease-quantity').addEventListener('click', function() {
+            if (quantity > 1) {
+                quantity--;
+                document.getElementById('quantity').value = quantity;
+                updateTotalPrice();
+            }
+        });
+
+        function updateTotalPrice() {
+            const totalPrice = productPrice * quantity;
+            document.getElementById('total-price').innerText = `Total: Nle${totalPrice.toFixed(2)}`;
+        }
+
+        // Handle checkout form submission
+        document.getElementById('checkout-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            document.getElementById('checkout-form').style.display = 'none'; // Hide the checkout form
+            document.getElementById('success-message').style.display = 'block'; // Show success message
+        });
+    </script>
 </body>
 </html>
