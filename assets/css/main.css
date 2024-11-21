@@ -165,9 +165,20 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: orange;
     color: white;
 }
+
+#product-details .buy-btn.om{
+    background-color: #ff7d08;
+}
+#product-details .buy-btn.qm{
+    background-color: #f79328;
+}
+
+#product-details .buy-btn.am{
+    background-color: #a41e7a;
+}
+
 #product-details .buy-btn img{
     width: 45px;
     height: 45px;
@@ -250,12 +261,15 @@ a {
 }
 
 .quantity-selector button {
-    background-color: #007bff; /* Bootstrap primary color */
+    background-color: #007bff; 
     color: white;
+    width: 55px;
+    height: 55px;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 5px 10px;
     cursor: pointer;
+    font-size: 22px;
 }
 
 .quantity-selector input {
@@ -274,4 +288,60 @@ a {
     padding: 4rem;
     text-align: center;
     display: none;
+}
+
+.payment-options, .quantity-selector{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+#checkout-form {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 2.1rem;
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+#checkout-form .payment-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+#checkout-form h2 {
+    margin-bottom: 20px;
+    color: #4b6e42;
+}
+
+#checkout-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#checkout-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4b6e42;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#checkout-form button:hover {
+    background-color: #3a5631;
 }

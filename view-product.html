@@ -3,93 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details</title>
+    <title>View Product - Women Farm Connect</title>
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
     <div id="header"></div>
-    <button class="back-btn" onclick="window.history.back()">Back</button>
-    <div class="flex-cont">
-        <div id="product-details">
-            <img id="product-image" src="" alt="Product Image">
-            <h3 id="product-name"></h3>
-            <p class="price"  id="product-price"></p>
-            <p class="price" id="total-price"></p>
 
-            <!-- Quantity Selector -->
-            <div class="quantity-selector">
-                <button id="decrease-quantity">-</button>
-                <input type="number" id="quantity" value="1" min="1" readonly>
-                <button id="increase-quantity">+</button>
-            </div>
-
-            <div class="">
-                <button class="buy-btn btn qm" id="buy-button">
-                    <img src="assets/images/QMONEY.jpg" alt="">
-                    Buy with Qmoney
-                </button>
-            </div>
+    <div id="product-details">
+        <img id="product-image" src="" alt="Product Image">
+        <h3 id="product-name"></h3>
+        <p class="price" id="product-price"></p>
+        <div class="quantity-selector">
+            <button id="decrease-quantity" aria-label="Decrease quantity">-</button>
+            <input type="number" id="quantity" value="1" min="1" aria-label="Quantity">
+            <button id="increase-quantity" aria-label="Increase quantity">+</button>
         </div>
-        <form id="checkout-form" style="display: none;">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <input type="text" placeholder="QMoney Number" required>
-            <input type="text" placeholder="Pin" required>
-            <h3>OTP Checker</h3>
-            <input type="text" placeholder="OTP" required>
-            <button type="submit">Checkout</button>
-        </form>
-        <div id="success-message">Bought successfully!</div> <!-- Success message -->
+        <p class="price" id="total-price"></p>
+        <div class="payment-options">
+            <button class="buy-btn qm" id="qmoney-btn">
+                <img src="assets/images/qmoney.jpg" alt="QMoney Logo">
+                Pay with QMoney
+            </button>
+            <button class="buy-btn om" id="orange-btn">
+                <img src="assets/images/orange-money.png" alt="Orange Money Logo">
+                Pay with Orange Money
+            </button>
+            <button class="buy-btn am" id="afrimoney-btn">
+                <img src="assets/images/afri-money.png" alt="AfriMoney Logo">
+                Pay with AfriMoney
+            </button>
+        </div>
     </div>
+
+    <div id="checkout-form">
+        <img id="payment-logo" src="" alt="Payment Method Logo" class="payment-logo">
+        <h2 id="form-title">Complete Your Purchase</h2>
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="address" placeholder="Delivery Address" required>
+        <input type="tel" id="money-number" placeholder="Money Number" required>
+        <input type="number" id="pin" placeholder="PIN" required>
+        <h3>OTP Validator</h3>
+        <input type="tel" id="otp" placeholder="OTP CODE:" required>
+        <button id="submit-payment">Complete Payment</button>
+    </div>
+
+    <div id="success-message"></div>
+
+    <button class="back-btn" onclick="window.history.back()">Back to Market</button>
+
     <div id="footer"></div>
     <script src="assets/js/main.js"></script>
-
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const productName = urlParams.get('name');
-        const productImage = urlParams.get('image');
-        const productPrice = parseFloat(urlParams.get('price').replace('Nle', '').replace(',', ''));
-
-        document.getElementById('product-name').innerText = productName;
-        document.getElementById('product-image').src = productImage;
-        document.getElementById('product-price').innerText = `Price: Nle${productPrice.toFixed(2)}`;
-        document.getElementById('total-price').innerText = `Total: Nle${productPrice.toFixed(2)}`;
-
-        // Add event listener to the buy button
-        document.getElementById('buy-button').addEventListener('click', function() {
-            const checkoutForm = document.getElementById('checkout-form');
-            checkoutForm.style.display = 'block'; // Show the checkout form
-            checkoutForm.scrollIntoView({ behavior: 'smooth' }); // Scroll to the form
-        });
-
-        // Quantity functionality
-        let quantity = 1;
-
-        document.getElementById('increase-quantity').addEventListener('click', function() {
-            quantity++;
-            document.getElementById('quantity').value = quantity;
-            updateTotalPrice();
-        });
-
-        document.getElementById('decrease-quantity').addEventListener('click', function() {
-            if (quantity > 1) {
-                quantity--;
-                document.getElementById('quantity').value = quantity;
-                updateTotalPrice();
-            }
-        });
-
-        function updateTotalPrice() {
-            const totalPrice = productPrice * quantity;
-            document.getElementById('total-price').innerText = `Total: Nle${totalPrice.toFixed(2)}`;
-        }
-
-        // Handle checkout form submission
-        document.getElementById('checkout-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
-            document.getElementById('checkout-form').style.display = 'none'; // Hide the checkout form
-            document.getElementById('success-message').style.display = 'block'; // Show success message
-        });
-    </script>
+    <script src="assets/js/view-product.js"></script>
 </body>
 </html>
+

@@ -52,7 +52,7 @@ body {
 
 .item-card {
     width: calc(25% - 20px);
-    height: 370px;
+    height: 450px;
     background-color: white;
     border: 2px solid #f7c40f;
     border-radius: 8px;
@@ -63,7 +63,7 @@ body {
 
 .item-card img {
     width: 100%;
-    height: 185px;
+    height: 275px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 10px;
